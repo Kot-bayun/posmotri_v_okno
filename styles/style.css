@@ -39,8 +39,7 @@ ol {
 
 .content {
   display: flex;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
   align-items: flex-end;
   max-width: 1140px;
   padding-top: 133px;
