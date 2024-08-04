@@ -43,7 +43,7 @@ ol {
 .content {
   display: flex;
   margin: auto;
-  align-items: flex-end;
+  align-items: flex-start;
   max-width: 1140px;
   padding-top: 133px;
   padding-bottom: 133px;
@@ -87,6 +87,8 @@ ol {
 }
 
 .search-form__label {
+  display: flex;
+  align-items: center;
   width: fit-content;
 }
 
@@ -112,8 +114,8 @@ ol {
 .search-form__textfield {
   background-color: transparent;
   border: none;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   word-spacing: -3px;
@@ -157,10 +159,14 @@ input[type='checkbox']:focus-visible + .search-form__pseudo-checkbox {
   border: 1px solid #fff;
 }
 
+.search-form__label-text {
+ padding-left: 5px;
+}
+
 .button {
   cursor: pointer;
   background-color: transparent;
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
   border-radius: 1px;
   color: #fff;
   min-height: 34px;
@@ -178,7 +184,7 @@ input[type='checkbox']:focus-visible + .search-form__pseudo-checkbox {
  }
  
  .button:focus {
-   border: none;
+   outline: none;
  }
  
  .button:focus-visible {
@@ -211,7 +217,7 @@ input[type='checkbox']:focus-visible + .search-form__pseudo-checkbox {
 .content__list {
   position: relative;
   max-height: 298px;
-  overflow-y: scroll;
+  overflow: auto;
 }
 
 .content__list::-webkit-scrollbar {
@@ -238,25 +244,25 @@ input[type='checkbox']:focus-visible + .search-form__pseudo-checkbox {
   background-color: #545050;
 }
 
-.content__video-card {
-  display: flex;
-  align-items: flex-start;
-}
-
-.content__video-card:active {
+.content__card-link:active {
   background-color: #545050;
 }
 
-.content__video-card:hover {
+.content__card-link:hover {
   text-decoration: underline;
 }
 
-.content__video-card:focus {
+.content__card-link:focus {
   outline: none;
 }
 
-.content__video-card:focus-visible {
-  border: 10px solid #fff;
+.content__card-link:focus-visible {
+  border: 1px solid #fff;
+}
+
+.content__video-card {
+  display: flex;
+  align-items: flex-start;
 }
 
 .content__video-card-description-container {
@@ -276,6 +282,7 @@ input[type='checkbox']:focus-visible + .search-form__pseudo-checkbox {
 
 .content__video-card-thumbnail {
   max-width: 193px;
+  object-position: center;
 }
 
 .more-button {
