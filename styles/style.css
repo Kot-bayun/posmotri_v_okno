@@ -92,7 +92,7 @@ ol {
   width: fit-content;
 }
 
-.search-form__label:hover {
+.search-form__label:hover .search-form__label-text {
   text-decoration: underline;
   cursor: pointer;
 }
