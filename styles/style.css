@@ -90,11 +90,11 @@ ol {
   display: flex;
   align-items: center;
   width: fit-content;
+  cursor: pointer;
 }
 
 .search-form__label:hover .search-form__label-text {
   text-decoration: underline;
-  cursor: pointer;
 }
 
 .search-form__label:has(:focus-visible) {
